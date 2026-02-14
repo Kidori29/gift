@@ -1,12 +1,10 @@
+// Google Form Configuration
 const CONFIG = {
-    // URL Google Form (đã convert sang formResponse)
-    GOOGLE_FORM_URL: 'https://docs.google.com/forms/d/e/1FAIpQLSfQxkxhzGgQxhyQzGgQxhyQzGgQxhyQzGgQxhyQzGgQxhyQz/formResponse',
+    // URL Google Form (thay viewform thành formResponse)
+    // Ví dụ: https://docs.google.com/forms/d/e/1FAIpQLSf.../formResponse
+    GOOGLE_FORM_URL: 'https://docs.google.com/forms/d/e/1FAIpQLSdyiJzDaQwgk5dS6PO_UGyPBa-MIC06Ryxw9ZolAwbg00xHzg/viewform?usp=dialog',
 
-    // ID của các trường trong Google Form
-    // Bạn cần thay thế bằng ID thật lấy từ link pre-filled
-    FIELD_IDS: {
-        NAME: 'entry.YOUR_NAME_ID',       // Ví dụ: entry.123456789
-        EMAIL: 'entry.YOUR_EMAIL_ID',     // Ví dụ: entry.987654321
-        MESSAGE: 'entry.YOUR_MESSAGE_ID'  // Ví dụ: entry.1122334455
-    }
+    // ID của trường "Lời nhắn" trong Google Form
+    // Lấy từ link pre-filled, ví dụ: entry.123456789
+    MESSAGE_FIELD_ID: 'entry.647663646'
 };
