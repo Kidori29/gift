@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Validate
         if (!message) {
-            showMessage('error', 'Vui lòng viết lời nhắn!');
+            showMessage('error', 'Viết gì đó đii!');
             return;
         }
 
