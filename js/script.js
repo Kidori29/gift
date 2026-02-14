@@ -114,8 +114,8 @@ class Confetti {
         this.x = Math.random() * confettiCanvas.width;
         this.y = -10;
         this.size = Math.random() * 8 + 5;
-        this.speedY = Math.random() * 3 + 2;
-        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * 3 - 2; // Allow moving up initially
+        this.speedX = Math.random() * 6 - 3; // Wider spread
         this.color = this.randomColor();
         this.rotation = Math.random() * 360;
         this.rotationSpeed = Math.random() * 10 - 5;
@@ -136,8 +136,12 @@ class Confetti {
         this.x += this.speedX;
         this.rotation += this.rotationSpeed;
 
-        if (this.y > confettiCanvas.height / 2) {
-            this.opacity -= 0.01;
+        // Gravity effect
+        this.speedY += 0.1;
+
+        // Fade out only when near bottom
+        if (this.y > confettiCanvas.height - 100) {
+            this.opacity -= 0.02;
         }
     }
 
