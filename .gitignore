@@ -1,0 +1,5 @@
+# Add this to your .gitignore
+config.js
+messages.json
+.DS_Store
+*.log

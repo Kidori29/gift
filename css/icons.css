@@ -1,0 +1,292 @@
+/* Custom Animated Icons - Professional SVG-based icons */
+
+/* Gift Icon Animation */
+.icon-gift {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+}
+
+.icon-gift svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    animation: giftBounce 3s ease-in-out infinite;
+}
+
+@keyframes giftBounce {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translateY(-5px) rotate(5deg);
+    }
+}
+
+/* Heart Icon Animation */
+.icon-heart {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+}
+
+.icon-heart svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    animation: heartPulse 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    10%,
+    30% {
+        transform: scale(1.15);
+    }
+
+    20%,
+    40% {
+        transform: scale(0.95);
+    }
+}
+
+/* Sparkles Icon Animation */
+.icon-sparkles {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+}
+
+.icon-sparkles svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.icon-sparkles svg .sparkle-1 {
+    animation: sparkle1 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.icon-sparkles svg .sparkle-2 {
+    animation: sparkle2 1.5s ease-in-out 0.3s infinite;
+    transform-origin: center;
+}
+
+.icon-sparkles svg .sparkle-3 {
+    animation: sparkle3 1.5s ease-in-out 0.6s infinite;
+    transform-origin: center;
+}
+
+@keyframes sparkle1 {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(180deg);
+    }
+}
+
+@keyframes sparkle2 {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.9) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1) rotate(-180deg);
+    }
+}
+
+@keyframes sparkle3 {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(0.7) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(240deg);
+    }
+}
+
+/* Music Icon Animation */
+.icon-music {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+}
+
+.icon-music svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.icon-music svg .note-1 {
+    animation: musicNote1 2s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+.icon-music svg .note-2 {
+    animation: musicNote2 2s ease-in-out 0.3s infinite;
+    transform-origin: bottom;
+}
+
+@keyframes musicNote1 {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-3px) scale(1.1);
+    }
+}
+
+@keyframes musicNote2 {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-2px) scale(1.05);
+    }
+}
+
+/* Champagne Icon Animation */
+.icon-champagne {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+}
+
+.icon-champagne svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.icon-champagne svg .bubble {
+    animation: champagneBubble 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.icon-champagne svg .bubble:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.icon-champagne svg .bubble:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes champagneBubble {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-5px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.8);
+    }
+}
+
+/* Rotate/Reset Icon Animation */
+.icon-rotate {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+}
+
+.icon-rotate svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    transition: transform 0.5s ease;
+}
+
+.icon-rotate:hover svg {
+    transform: rotate(-360deg);
+}
+
+/* Message/Send Icon Animation */
+.icon-send {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+}
+
+.icon-send svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.icon-send:hover svg {
+    transform: translateX(3px) translateY(-3px);
+}
+
+/* Loading Spinner for form submission */
+.icon-spinner {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+}
+
+.icon-spinner svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
