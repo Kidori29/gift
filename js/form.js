@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Validate
         if (!message) {
-            showMessage('error', '⚠️ Vui lòng viết lời nhắn!');
+            showMessage('error', 'Vui lòng viết lời nhắn!');
             return;
         }
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Success (no-cors always assumes success)
-            showMessage('success', '✨ Lời nhắn đã được gửi! Cảm ơn bạn! 💝');
+            showMessage('success', 'Lời nhắn đã được gửi:3 Thanks ạ!');
             messageForm.reset();
             charCount.textContent = '0';
 
