@@ -39,15 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         try {
-            // Prepare form data for Google Form
-            const formData = new FormData();
-            formData.append(CONFIG.MESSAGE_FIELD_ID, message);
+            // Use URLSearchParams (not FormData) for Google Forms
+            const params = new URLSearchParams();
+            params.append(CONFIG.MESSAGE_FIELD_ID, message);
 
             // Send to Google Form with no-cors mode
             await fetch(CONFIG.GOOGLE_FORM_URL, {
                 method: 'POST',
                 mode: 'no-cors',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: params.toString()
             });
 
             // Success (no-cors always assumes success)
