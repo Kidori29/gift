@@ -2,11 +2,7 @@
 const giftBox = document.getElementById('giftBox');
 const giftScreen = document.getElementById('giftScreen');
 const messageScreen = document.getElementById('messageScreen');
-const musicBtn = document.getElementById('musicBtn');
 const confettiBtn = document.getElementById('confettiBtn');
-const resetBtn = document.getElementById('resetBtn');
-const bgMusic = document.getElementById('bgMusic');
-const musicIcon = document.getElementById('musicIcon');
 const confettiCanvas = document.getElementById('confettiCanvas');
 const ctx = confettiCanvas.getContext('2d');
 
@@ -18,9 +14,6 @@ window.addEventListener('resize', () => {
     confettiCanvas.width = window.innerWidth;
     confettiCanvas.height = window.innerHeight;
 });
-
-// Music state
-let isMusicPlaying = false;
 
 // Create floating particles
 function createParticles() {
@@ -68,44 +61,9 @@ giftBox.addEventListener('click', () => {
     }, 800);
 });
 
-// Music button handler
-musicBtn.addEventListener('click', () => {
-    const musicText = document.getElementById('musicText');
-    if (isMusicPlaying) {
-        bgMusic.pause();
-        musicIcon.className = 'fas fa-music';
-        musicText.textContent = 'Bật Nhạc';
-        isMusicPlaying = false;
-    } else {
-        bgMusic.play().catch(err => {
-            console.log('Audio play failed:', err);
-        });
-        musicIcon.className = 'fas fa-volume-xmark';
-        musicText.textContent = 'Tắt Nhạc';
-        isMusicPlaying = true;
-    }
-});
-
 // Confetti button handler
 confettiBtn.addEventListener('click', () => {
     createConfettiBurst();
-});
-
-// Reset button handler
-resetBtn.addEventListener('click', () => {
-    messageScreen.classList.remove('active');
-    giftScreen.style.display = 'block';
-    giftBox.classList.remove('opening');
-
-    // Reset music
-    if (isMusicPlaying) {
-        const musicText = document.getElementById('musicText');
-        bgMusic.pause();
-        bgMusic.currentTime = 0;
-        musicIcon.className = 'fas fa-music';
-        musicText.textContent = 'Bật Nhạc';
-        isMusicPlaying = false;
-    }
 });
 
 // Confetti system
